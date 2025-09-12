@@ -8,7 +8,7 @@ This repository contains my personal configuration files (dotfiles) for my Arch 
 
 To set up a new Arch Linux machine from scratch, run the following command in your terminal. This will automatically download and execute the bootstrap script, which installs Git, clones this repository, and runs the main installer.
 
-    curl -L "[https://raw.githubusercontent.com/ArashSameni/dotfiles/master/bootstrap.sh](https://raw.githubusercontent.com/ArashSameni/dotfiles/master/bootstrap.sh)" | bash
+    curl -L "https://raw.githubusercontent.com/ArashSameni/dotfiles/master/bootstrap.sh" | bash
     
 
 📂 Repository Structure
