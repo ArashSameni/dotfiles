@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# sync - Synchronizes dotfiles from 'home/' to the user's home directory.
+# It uses rsync to copy and update files, merging contents without deleting the destination.
+
+set -e # Exit immediately if a command fails
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+SOURCE_DIR="$SCRIPT_DIR/home"
+DEST_DIR="$HOME"
+
+rsync_opts="-av --exclude '.git'" # -a is archive mode, -v is verbose
+if [[ "$1" == "--dry" ]]; then
+    echo "💧 [DRY RUN] Simulating changes..."
+    rsync_opts="$rsync_opts --dry-run"
+fi
+
+echo "▶️ Starting dotfile synchronization (merge/update)..."
+echo "Source: $SOURCE_DIR"
+echo "Destination: $DEST_DIR"
+echo ""
+
+rsync $rsync_opts "$SOURCE_DIR/" "$DEST_DIR/"
+
+echo ""
+echo "✅ Sync complete."
