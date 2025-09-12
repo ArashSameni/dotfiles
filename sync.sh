@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# sync - Synchronizes dotfiles from 'home/' to the user's home directory.
+# sync.sh - Synchronizes dotfiles from 'home/' to the user's home directory.
 # It uses rsync to copy and update files, merging contents without deleting the destination.
 
 set -e # Exit immediately if a command fails
