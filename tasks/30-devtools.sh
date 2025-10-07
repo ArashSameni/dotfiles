@@ -12,6 +12,7 @@ run_as_user() {
 echo "▶️ Installing Go, Zig, and Pyenv from AUR..."
 if command -v yay &> /dev/null; then
     yay -S --noconfirm --needed --answerdiff None --answerclean None \
+	    github-cli \
         go \
         zig \
         pyenv

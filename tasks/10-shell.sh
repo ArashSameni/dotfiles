@@ -2,12 +2,12 @@
 
 set -e
 
-echo "▶️ Installing Zsh and Ghostty..."
-sudo pacman -S --noconfirm --needed zsh ghostty
+echo "▶️ Installing Zsh ..."
+sudo pacman -S --noconfirm --needed zsh
 
 echo "▶️ Installing Oh My Posh from AUR..."
 if command -v yay &> /dev/null; then
-    yay -S --noconfirm --needed --answerdiff None --answerclean None oh-my-posh-bin
+    yay -S --noconfirm --needed --answerdiff None --answerclean None oh-my-posh
 else
     echo "❌ Error: yay is not installed. Cannot install AUR packages."
     exit 1
@@ -20,7 +20,7 @@ else
     echo "Oh My Zsh is already installed."
 fi
 
-if [ "$SHELL" != "/bin/zsh" ]; then
+if [[ "$SHELL" != *zsh* ]]; then
     echo "▶️ Setting Zsh as the default shell..."
     chsh -s $(which zsh)
 else

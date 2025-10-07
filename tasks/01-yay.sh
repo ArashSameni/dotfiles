@@ -20,4 +20,3 @@ cd ~
 rm -rf "$TEMP_DIR"
 
 echo "✅ yay installation complete."
-

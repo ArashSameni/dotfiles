@@ -9,6 +9,7 @@ local path_dirs=(
     "$HOME/Apps"
     "/var/lib/snapd/snap/bin"
     $HOME/.bun/bin
+    "$HOME/.local/share/gem/ruby/3.4.0/bin"
 )
 export PATH="$PATH:${(j|:|)path_dirs}"
 unset path_dirs
