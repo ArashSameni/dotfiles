@@ -3,11 +3,11 @@
 set -e
 
 echo "▶️ Installing Zsh ..."
-sudo pacman -S --noconfirm --needed zsh
+yay -S --noconfirm --needed zsh eza zoxide
 
 echo "▶️ Installing Oh My Posh from AUR..."
 if command -v yay &> /dev/null; then
-    yay -S --noconfirm --needed --answerdiff None --answerclean None oh-my-posh
+    yay -S --noconfirm --needed --answerdiff None --answerclean None oh-my-posh-bin
 else
     echo "❌ Error: yay is not installed. Cannot install AUR packages."
     exit 1

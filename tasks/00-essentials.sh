@@ -13,7 +13,8 @@ sudo pacman -S --noconfirm --needed \
     wget \
     curl \
     unzip \
-    less
+    less \
+    rsync
 
 echo "✅ System essentials installed."
 

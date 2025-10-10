@@ -11,7 +11,7 @@
 set -e # Exit immediately if a command fails
 
 # Get the absolute path of the directory where this script is located
-SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+export SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 TASKS_DIR="$SCRIPT_DIR/tasks"
 
 # --- Argument Parsing ---
