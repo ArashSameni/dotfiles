@@ -13,11 +13,12 @@ echo "▶️ Installing Go, Zig, and Pyenv from AUR..."
 if command -v yay &> /dev/null; then
     yay -S --noconfirm --needed --answerdiff None --answerclean None \
 	github-cli \
-        go \
-        zig \
-        pyenv \
-	tmux \
-	neovim
+    go \
+    zig \
+    pyenv \
+    lazygit \
+	neovim \
+    visual-studio-code-bin
 else
     echo "❌ Error: yay is not installed. Cannot install AUR packages."
     exit 1

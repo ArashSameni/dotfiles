@@ -3,13 +3,11 @@ export GOPATH=$(go env GOPATH)
 export NVM_DIR="$HOME/.nvm"
 
 local path_dirs=(
-    "$GOPATH/bin"
-    "$HOME/.cargo/bin"
     "$HOME/.local/bin"
-    "$HOME/Apps"
+    "$HOME/.cargo/bin"
+    "$HOME/.bun/bin"
+    "$GOPATH/bin"
     "/var/lib/snapd/snap/bin"
-    $HOME/.bun/bin
-    "$HOME/.local/share/gem/ruby/3.4.0/bin"
 )
 export PATH="$PATH:${(j|:|)path_dirs}"
 unset path_dirs
@@ -35,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
 

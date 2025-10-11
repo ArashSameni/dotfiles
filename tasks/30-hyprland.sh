@@ -11,6 +11,14 @@ yay -S --noconfirm --needed --answerdiff None --answerclean None \
     waybar \
     rofi \
     dunst \
-    network-manager-applet
+    network-manager-applet \
+    grim \
+    slurp \
+    wl-clipboard \
+    qt5ct \
+    qt6ct \
+    breeze \
+	swayimg \
+    vlc
 
 echo "✅ Hyprland installation complete."
